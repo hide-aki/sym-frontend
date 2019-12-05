@@ -1,0 +1,8 @@
+[[resources]]
+name = "frontend-production"
+docker_file = "Dockerfile.production"
+image_name = "gcr.io/symbiome/frontend-production"
+console_files = []
+resource_files = [
+  "kubernetes/app/frontend-production.yml",
+]
