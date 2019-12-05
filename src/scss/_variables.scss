@@ -1,0 +1,34 @@
+// Variable overrides
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+
+@font-face {
+    font-family: Drive-Light;
+    src: url("../assets/fonts/Drive-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GraublauWeb;
+    font-weight: bold;
+    src: url("../assets/fonts/Drive-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Feijoa-Medium;
+    font-weight: regular;
+    src: url("../assets/fonts/Feijoa-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Feijoa-Display;
+    font-weight: regular;
+    src: url("../assets/fonts/Feijoa-Display.otf") format("opentype");
+}
+
+
+$default-font: 'Feijoa-Display';
+$title-font: 'Feijoa-Display';
+$menu-font: 'Drive-Light';
+$light-grey: #39383a;
+$grey: #4C4D56;
+$section-height: 850px;
+$yellow: #FFF166;

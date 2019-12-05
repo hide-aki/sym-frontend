@@ -1,0 +1,1426 @@
+// Here you can add other styles
+@import "screen-size";
+
+body {
+  background: #1e1c1d;
+}
+h6 {
+  margin: 0px;
+}
+
+.app-header {
+  background-color: transparent;
+  border-bottom-color: $yellow;
+  -webkit-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.09);
+}
+
+.app-body {
+  margin-top: 0px !important;
+}
+
+.container-fluid {
+  padding: 0px 0px !important;
+}
+
+a {
+  color: #fff166;
+}
+
+.nav-link {
+  font-family: $menu-font;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+  @include respond-to(md) {
+    color: $grey !important;
+  }
+}
+
+.app-header .navbar-nav {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.navbar-collapse {
+  background-color: $yellow;
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.introduction {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 748px;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(xs) {
+    min-height: 600px;
+  }
+  @include respond-to(sm) {
+    height: unset;
+  }
+  @include respond-to(xs) {
+    height: unset;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf9f9;
+    height: 100%;
+
+    h1 {
+      color: #39383a;
+      font-size: 8rem;
+      margin-bottom: 2rem;
+      font-family: $default-font;
+    }
+    p {
+      margin-top: 2rem;
+      max-width: 400px;
+      color: #39383a;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+  &__carousel {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .carousel, .carousel-inner, .carousel-item, &__title {
+    height: 100%;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    cursor: pointer;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__logo {
+    width: 55%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 12rem;
+    padding-right: 12rem;
+
+    color: #fff166;
+    font-family: $title-font;
+    line-height: 50px;
+    font-size: 21px;
+    letter-spacing: 0.8px;
+    text-align: center;
+  }
+
+  &__sectionlink {
+    color: #39383a;
+    font-family: $default-font;
+    margin-top: 2rem;
+    h6 {
+      padding-left: 0.6rem;
+      color: #39383a;
+      font-family: "Feijoa Medium";
+      font-size: 27px;
+      letter-spacing: -0.2px;
+      line-height: 29px;
+    }
+    img {
+      margin-top: 0.5rem;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include respond-to(sm) {
+      margin-top: 1.5rem;
+      h6 {
+        padding-left: 0rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-7%);
+
+    button {
+      appearance: none;
+      border: none;
+      border-radius: 999em;
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 2.5rem;
+      padding: 0;
+      background-color: rgba(white, 0.5);
+      &.active {
+        background-color: rgba($yellow, 0.5);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.future {
+  background-color: #d7cfc7;
+  min-height: $section-height / 2;
+
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.25rem;
+  }
+
+  &__underline {
+    padding-bottom: 0.5rem;
+    background-image: url("../assets/img/grey.png");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: bottom;
+  }
+}
+
+.ancestral {
+  background-color: #39383a;
+  width: 100%;
+  min-height: $section-height;
+  position: relative;
+  align-items: center;
+
+  > .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    color: #ffc03f;
+    font-family: $default-font;
+    font-size: 8rem;
+    letter-spacing: -0.6px;
+    text-align: right;
+    z-index: 2;
+
+    @include respond-to(md) {
+      font-size: 4rem;
+    }
+    @include respond-to(sm) {
+      font-size: 2.9rem;
+    }
+  }
+
+  &__ancestral {
+    letter-spacing: -0.6px;
+    color: #ffc03f;
+    margin-right: -7rem;
+  }
+
+  &__health {
+    color: #ffc03f;
+    margin-right: -2rem;
+  }
+
+  &__description {
+    font-family: $title-font;
+    color: #faf9f9;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-right: 4rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.4px;
+    text-align: right;
+    max-width: 550px;
+  }
+}
+
+.ingredients {
+  background-color: #d7cfc7;
+  width: 100%;
+  min-height: $section-height;
+  position: relative;
+  align-items: center;
+
+  > .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    display: inline-block;
+    color: $grey;
+    font-family: $default-font;
+    font-size: 6.7rem;
+  }
+
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__ingredients {
+    margin-left: -5rem;
+    z-index: 2;
+  }
+
+  &__description {
+    display: inline-block;
+    font-family: $title-font;
+    color: $grey;
+    font-size: 1.25rem;
+    letter-spacing: -0.4px;
+    max-width: 550px;
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+}
+
+.science {
+  background-color: #39383a;
+  width: 100%;
+  min-height: $section-height;
+  position: relative;
+  align-items: center;
+
+  > .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  h1 {
+    color: #ffc03f;
+    font-family: $default-font;
+    font-size: 6.6rem;
+    letter-spacing: -0.6px;
+    z-index: 2;
+  }
+
+  &__science {
+    margin-right: -9rem;
+  }
+
+  &__luxury {
+    margin-right: -5rem;
+  }
+
+  &__description {
+    font-family: $title-font;
+    color: #faf9f9;
+    font-size: 1.25rem;
+    letter-spacing: -0.4px;
+    max-width: 550px;
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: 4rem;
+  }
+}
+
+.together {
+  min-height: $section-height;
+  background-color: #d7cfc7;
+  align-items: center;
+
+  > .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    display: inline-block;
+    color: $grey;
+    font-family: $default-font;
+    font-size: 6.7rem;
+  }
+
+  &__weare {
+    margin-left: -5rem;
+  }
+  &__symbiome {
+    margin-left: -5rem;
+  }
+
+  &__description {
+    text-align: left;
+    font-family: $title-font;
+    color: $grey;
+    font-size: 1.25rem;
+    letter-spacing: -0.4px;
+    max-width: 550px;
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+}
+
+.journey {
+  background-image: url("../assets/img/bg.png");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center;
+  width: 100%;
+  min-height: 748px;
+  position: relative;
+  @include respond-to(sm) {
+    min-height: 698px;
+  }
+  @include respond-to(xs) {
+    min-height: 698px;
+  }
+
+  &__back {
+    width: 434px;
+    @include respond-to(sm) {
+      width: 286px;
+    }
+    @include respond-to(xs) {
+      width: 286px;
+    }
+  }
+
+  h1 {
+    color: #ffc03f;
+    font-family: $default-font;
+    font-size: 107px;
+    letter-spacing: -0.6px;
+    @include respond-to(lg) {
+      font-size: 5rem;
+    }
+
+    @include respond-to(md) {
+      font-size: 4rem;
+    }
+  }
+
+  .marquee {
+    height: 146px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    div {
+      display: block;
+      width: 200%;
+      height: 150px;
+
+      position: absolute;
+      overflow: hidden;
+
+      animation: marquee 5s linear infinite;
+    }
+    h1 {
+      float: left;
+      width: 50%;
+      @include respond-to(sm) {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      @include respond-to(xs) {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__titleleft {
+    @include respond-to(sm) {
+      display: none;
+    }
+  }
+
+  &__titleright {
+  }
+}
+
+.privacy {
+  background-color: $light-grey;
+  width: 100%;
+  min-height: $section-height - 350;
+  position: relative;
+  padding-top: 7rem;
+  @include respond-to(sm) {
+    min-height: $section-height - 240;
+    padding-top: 6rem;
+  }
+  @include respond-to(xs) {
+    padding-top: 6rem;
+    min-height: $section-height - 240;
+  }
+  &__title {
+    color: $yellow;
+    font-family: $title-font;
+    margin-left: 20rem;
+    line-height: 2.5rem;
+    font-size: 27px;
+    letter-spacing: -0.4px;
+    @include respond-to(lg) {
+      margin-left: 10rem;
+    }
+    @include respond-to(md) {
+      margin-left: 6rem;
+    }
+    @include respond-to(sm) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__description {
+    color: $yellow;
+    font-family: $title-font;
+    font-size: 1.1rem;
+    margin-left: 20rem;
+    line-height: 29px;
+    margin-top: 3rem;
+    letter-spacing: -0.2px;
+    @include respond-to(lg) {
+      margin-left: 10rem;
+    }
+    @include respond-to(md) {
+      margin-left: 6rem;
+    }
+    @include respond-to(sm) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    @include respond-to(xs) {
+      font-size: 1.1rem;
+    }
+  }
+  &__sectionlink {
+    color: #fff166;
+    font-family: $default-font;
+    margin-top: 2rem;
+    margin-left: 18rem;
+    @include respond-to(lg) {
+      margin-left: 8rem;
+    }
+    @include respond-to(md) {
+      margin-left: 4rem;
+    }
+    @include respond-to(sm) {
+      margin-left: 0rem;
+      margin-right: 2rem;
+    }
+    h6 {
+      padding-left: 2rem;
+      font-size: 1.1rem;
+      letter-spacing: -0.2px;
+      line-height: 29px;
+      @include respond-to(sm) {
+        padding-left: 1rem;
+      }
+      @include respond-to(xs) {
+        font-size: 14px;
+      }
+    }
+    img {
+      margin-top: -12px;
+      margin-left: 13px;
+      width: 145px;
+      @include respond-to(sm) {
+        margin-left: -2px;
+      }
+    }
+  }
+}
+
+.typeform {
+  background-color: $yellow;
+  width: 100%;
+  min-height: $section-height - 200;
+  overflow: auto;
+  position: relative;
+  padding: 50px;
+  color: $grey;
+  font-family: $default-font;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 15px;
+  }
+  label {
+    font-size: 24px;
+  }
+}
+
+.symbiome {
+  background-color: #faf9f9;
+  width: 100%;
+  min-height: $section-height / 2;
+  position: relative;
+  padding-top: 8rem;
+
+  @include respond-to(sm) {
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+  }
+  @include respond-to(xs) {
+    padding-top: 4rem;
+  }
+  &__width60 {
+    width: 60.03%;
+    margin: 0 auto;
+    @include respond-to(sm) {
+      width: 100%;
+    }
+    @include respond-to(xs) {
+      width: 100%;
+    }
+  }
+  &__width100 {
+    width: 100%;
+  }
+  &__title {
+    color: $yellow;
+    font-family: $title-font;
+    font-size: 27px;
+    letter-spacing: -0.4px;
+    line-height: 40px;
+    margin-left: 2.3rem;
+    @include respond-to(sm) {
+      margin-left: 0rem;
+      margin-top: 2rem;
+    }
+    @include respond-to(xs) {
+      margin-left: 0rem;
+    }
+  }
+  &__remove__padding {
+    padding-right: 0px;
+  }
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    @include respond-to(md) {
+      width: 600px;
+    }
+    @include respond-to(sm) {
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+
+  &__description {
+    margin-top: 2rem;
+    font-family: $title-font;
+    font-size: 1.1rem;
+    color: $yellow;
+    line-height: 1.8rem;
+    letter-spacing: -0.2px;
+    margin-left: 2.6rem;
+    @include respond-to(sm) {
+      margin-left: 0rem;
+    }
+    @include respond-to(xs) {
+      margin-left: 0rem;
+      font-size: 15px;
+      letter-spacing: normal;
+    }
+  }
+  &__sectionlink {
+    color: #fff166;
+    font-family: $default-font;
+    margin-top: 3rem;
+    margin-left: 0.7rem;
+    @include respond-to(sm) {
+      margin-left: 1rem;
+    }
+    @include respond-to(xs) {
+      margin-left: 1rem;
+    }
+    h6 {
+      padding-left: 2rem;
+      font-size: 1.1rem;
+      font-family: $title-font;
+      font-weight: 300;
+      letter-spacing: -0.2px;
+      line-height: 29 px;
+      @include respond-to(sm) {
+        padding-left: 0rem;
+      }
+      @include respond-to(xs) {
+        padding-left: 0rem;
+      }
+    }
+    img {
+      margin-top: -12px;
+      margin-left: 15px;
+      width: 146px;
+      object-fit: cover;
+      object-position: center;
+      @include respond-to(sm) {
+        width: 137px;
+        margin-left: -18px;
+      }
+      @include respond-to(xs) {
+        margin-left: -18px;
+      }
+    }
+  }
+  &__remove__padding {
+    @include respond-to(sm) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  &__profime__img {
+    img {
+      margin-top: -12px;
+      margin-left: 1px;
+      width: 230px;
+      @include respond-to(sm) {
+        width: 219px;
+        margin-left: -25px;
+      }
+      @include respond-to(xs) {
+        width: 219px;
+        margin-left: -25px;
+      }
+    }
+  }
+
+  &__logo {
+    color: #39383a;
+    font-size: 8rem;
+    font-family: $default-font;
+    margin-bottom: 1.6rem;
+  }
+
+  &__email {
+    margin-bottom: 35px !important;
+  }
+}
+
+.footer {
+  height: 200px;
+  background-color: $yellow;
+  .row {
+    height: 100%;
+  }
+  .col {
+    height: 100%;
+    background-color: $yellow;
+  }
+  .footer-style {
+    color: #4c4d56;
+    font-family: $menu-font;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 27px;
+    text-align: center;
+  }
+}
+
+.emailform {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 345px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 2.5rem 0rem 4.5rem 0rem;
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 0px;
+  }
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 0px;
+  }
+  input {
+    padding: 0.5rem 1.4rem;
+    border: none;
+    flex-grow: 1;
+    color: #ffc03f;
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    vertical-align: middle;
+    background-color: #39383a;
+    outline: none;
+    transition: ease-in-out, background-color 0.35s ease-in-out;
+    &::-webkit-input-placeholder {
+      font-size: 1rem;
+      font-family: $menu-font;
+      color: #ffc03f;
+    }
+  }
+  button {
+    width: 56px;
+    height: 56px;
+    background-color: #39383a;
+    border: none;
+    margin-left: 2px;
+    svg {
+      color: #ffc03f;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.survey {
+  $height: 45rem;
+  min-height: $height;
+  max-height: $height;
+  background-color: $yellow;
+  flex-wrap: nowrap;
+  margin-top: 42px !important;
+  @include respond-to(sm) {
+    flex-direction: column;
+  }
+
+  &__left {
+    position: relative;
+    background-image: url("../assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 28px 34px;
+    color: $yellow;
+    @include respond-to(sm) {
+      padding: 20px 34px;
+    }
+    @include respond-to(xs) {
+      padding: 20px 34px;
+    }
+
+    &--step {
+      display: block;
+      font-size: 28px;
+      line-height: 46px;
+      font-weight: 200;
+      margin-bottom: 15px;
+      letter-spacing: -0.12px;
+      font-family: $menu-font;
+      @include respond-to(sm) {
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+
+    &--title {
+      font-size: 53px;
+      line-height: 62px;
+      font-family: $default-font;
+      color: #fff166;
+      letter-spacing: -0.6px;
+      @include respond-to(sm) {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 4rem;
+        line-height: 50px;
+        margin-top: 3rem;
+      }
+      @include respond-to(sm) {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 5rem;
+        line-height: 50px;
+        margin-top: 3rem;
+      }
+    }
+
+    &--footer {
+      position: absolute;
+      bottom: 51px;
+      left: 36px;
+      font-size: 17px;
+      line-height: 26px;
+      font-weight: 300;
+      font-family: "Drive-Light";
+      letter-spacing: 0.5px;
+      margin-bottom: 0px;
+      width: 80%;
+      @include respond-to(sm) {
+        bottom: 11px;
+        left: 65px;
+        text-align: -webkit-left;
+        width: 71%;
+      }
+    }
+
+    &--meta {
+      margin-top: 1.5rem;
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__right {
+    padding: 0;
+    padding-top: 2rem;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include respond-to(sm) {
+      padding-top: 4rem;
+    }
+
+    .carousel {
+      overflow: auto;
+      height: 100%;
+    }
+
+    &--confirm {
+      padding: 2rem;
+      color: $grey;
+      justify-content: space-between;
+      &--header {
+        font-size: 1.5rem;
+      }
+      &--footer {
+        font-size: 1rem;
+        a {
+          color: $grey;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--content {
+      span {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        color: $grey;
+        margin-bottom: 1.5rem;
+        @include respond-to(sm) {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        padding-bottom: 2rem;
+
+        margin: 0;
+        text-align: center;
+        color: $grey;
+        li {
+          // font-family: $menu-font;
+          font-size: 52px;
+          line-height: 60px;
+          &.active {
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: contain;
+          }
+          button {
+            appearance: none;
+            border: none;
+            background-color: transparent;
+            font-size: 2.25rem;
+            // font-family: $menu-font;
+            font-weight: 300;
+            padding: 1rem;
+            color: #4c4d56;
+            &:focus {
+              outline: none;
+            }
+            @include respond-to(sm) {
+              font-size: 1.5rem;
+              padding: 0.7rem;
+            }
+            @include respond-to(xs) {
+              font-size: 1.5rem;
+              padding: 0.7rem;
+            }
+          }
+          @include respond-to(sm) {
+            line-height: 23px;
+          }
+        }
+      }
+
+      form {
+        small {
+          font-size: 0.8rem;
+          color: $light-grey;
+        }
+
+        .form-group {
+          padding: 1.5rem;
+          border-bottom: 1px solid $light-grey;
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+
+        .react-datepicker-popper {
+        }
+      }
+
+      .survey-select-container {
+        .survey-select {
+          &__control {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+          &__value-container {
+            padding: 0;
+            font-size: 1rem;
+          }
+          &__placeholder,
+          &__indicator {
+            color: $grey;
+            font-size: 1rem;
+          }
+          &__menu {
+            background-color: $yellow;
+          }
+          &__option {
+            color: $grey;
+            font-size: 1rem;
+            &--is-focused {
+              background-color: rgba(black, 0.1);
+            }
+            &--is-selected {
+              background-color: rgba(black, 0.3);
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+
+    input,
+    textarea {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      color: $grey;
+      padding: 0;
+
+      &::placeholder {
+        color: $grey;
+        opacity: 1;
+      }
+
+      &:focus,
+      &:invalid,
+      &:valid {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    &--scroll {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &--textarea {
+      border-top: 1px solid $grey;
+      textarea {
+        resize: vertical;
+        padding: 1rem;
+      }
+    }
+
+    &--actions {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        appearance: none;
+        border: none;
+        background-color: rgba($grey, 0.15);
+        padding: 1rem;
+        width: 100%;
+        margin-right: 0.25rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        line-height: 27px;
+        &:focus {
+          outline: none;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        svg {
+          margin: {
+            left: 0.5rem;
+            right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__sentinel {
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .ancestral {
+    &__ancestral {
+      top: 27.2rem;
+      left: 2.2rem;
+    }
+    &__symbiome {
+      top: 33rem;
+      left: 5.25rem;
+    }
+  }
+  .ingredients {
+    &__clean {
+      top: 48.9rem;
+      left: 2.5rem;
+    }
+    &__ingredients {
+      top: 52rem;
+      left: 4.6rem;
+    }
+  }
+  .science {
+    &__science {
+      top: 46.3rem;
+      left: 2.7rem;
+    }
+    &__luxury {
+      top: 50rem;
+      left: 2.7rem;
+    }
+  }
+  .mobile-device-col {
+    max-width: 50%;
+  }
+  .col {
+    flex-basis: unset !important;
+  }
+}
+@media (max-width: 719px) {
+  .ancestral {
+    &__ancestral {
+      top: 17.6rem;
+      left: 1.6rem;
+    }
+    &__symbiome {
+      top: 23.3rem;
+      left: 5rem;
+    }
+  }
+  .ingredients {
+    &__clean {
+      top: 32.9rem;
+      left: 1.2rem;
+    }
+    &__ingredients {
+      top: 36rem;
+      left: 4.6rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 30.3rem;
+      left: 1.1rem;
+    }
+    &__luxury {
+      top: 33.7rem;
+      left: 1.1rem;
+    }
+  }
+}
+@media (max-width: 479px) {
+  .ancestral {
+    &__ancestral {
+      top: 15.4rem;
+      left: 1.4rem;
+    }
+    &__symbiome {
+      top: 21rem;
+      left: 5rem;
+    }
+  }
+  .ingredients {
+    &__clean {
+      top: 28.5rem;
+      left: 0.9rem;
+    }
+    &__ingredients {
+      top: 31.5rem;
+      left: 4rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 28.1rem;
+      left: 1.3rem;
+    }
+    &__luxury {
+      top: 31rem;
+      left: 1.3rem;
+    }
+  }
+}
+@media (max-width: 419px) {
+  .ancestral {
+    &__ancestral {
+      top: 12.9rem;
+      left: 1.2rem;
+    }
+    &__symbiome {
+      top: 18.8rem;
+      left: 4.5rem;
+    }
+  }
+  .ingredients {
+    &__clean {
+      top: 24.3rem;
+      left: 0.5rem;
+    }
+    &__ingredients {
+      top: 27.8rem;
+      left: 4rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 24.3rem;
+      left: 1rem;
+    }
+    &__luxury {
+      top: 27.5rem;
+      left: 1rem;
+    }
+  }
+}
+
+@media only (max-width: 414px) {
+  .ancestral {
+    &__ancestral {
+      top: 14.9rem;
+      left: 1.2rem;
+    }
+    &__symbiome {
+      top: 20.6rem;
+      left: 4.9rem;
+    }
+  }
+
+  .ingredients {
+    &__clean {
+      top: 27.8rem;
+      left: 0.8rem;
+    }
+    &__ingredients {
+      top: 31.2rem;
+      left: 4rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 27.7rem;
+      left: 1.3rem;
+    }
+    &__luxury {
+      top: 31rem;
+      left: 1.3rem;
+    }
+  }
+}
+
+@media only (max-width: 375px) {
+  .ancestral {
+    &__ancestral {
+      top: 13.4rem;
+      left: 1.2rem;
+    }
+    &__symbiome {
+      top: 19.3rem;
+      left: 4.9rem;
+    }
+  }
+
+  .ingredients {
+    &__clean {
+      top: 24.9rem;
+      left: 0.1rem;
+    }
+    &__ingredients {
+      top: 28.7rem;
+      left: 4.3rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 25.3rem;
+      left: 0.9rem;
+    }
+    &__luxury {
+      top: 29.5rem;
+      left: 0.9rem;
+    }
+  }
+}
+
+@media only (max-width: 360px) {
+  .ancestral {
+    &__ancestral {
+      top: 12.9rem;
+      left: 1.2rem;
+    }
+    &__symbiome {
+      top: 18.8rem;
+      left: 4.9rem;
+    }
+  }
+
+  .ingredients {
+    &__clean {
+      top: 24.3rem;
+      left: 0.4rem;
+    }
+    &__ingredients {
+      top: 28rem;
+      left: 4rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 24.3rem;
+      left: 1.1rem;
+    }
+    &__luxury {
+      top: 27.9rem;
+      left: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .ancestral {
+    &__ancestral {
+      top: 11.3rem;
+      left: 1.1rem;
+    }
+    &__symbiome {
+      top: 16.9rem;
+      left: 4.5rem;
+    }
+  }
+
+  .ingredients {
+    &__clean {
+      top: 21.7rem;
+      left: 0.2rem;
+    }
+    &__ingredients {
+      top: 25.2rem;
+      left: 3.4rem;
+    }
+  }
+
+  .science {
+    &__science {
+      top: 21.9rem;
+      left: 0.8rem;
+    }
+    &__luxury {
+      top: 25.1rem;
+      left: 0.8rem;
+    }
+  }
+}
