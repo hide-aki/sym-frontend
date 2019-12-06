@@ -1,0 +1,75 @@
+# frontend deployment and service
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-production
+spec:
+  replicas: 2
+  revisionHistoryLimit: 0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        # these labels will be used by the service definition
+        name: frontend-production
+    spec:
+      containers:
+        - name: app
+          command: ["nginx", "-g", "daemon off;"]
+          image: :image_name
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "50M"
+            limits:
+              memory: "200M"
+      nodeSelector:
+        node: api
+      terminationGracePeriodSeconds: 30
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-production
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    # identifies the set of pods to load balance traffic to
+    name: frontend-production
+  # nodeport required if service should be accessible outside the cluster
+  type: NodePort
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: frontend-production
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: www.symbiome.co
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend-production
+          servicePort: 80
